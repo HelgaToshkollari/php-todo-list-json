@@ -1,26 +1,26 @@
 [
     {
       "text" : "HTML",
-      "done" : "false"
+      "done" : "true"
     },
     {
       "text" : "CSS",
-      "done" : "false"
+      "done" : "true"
     },
     {
       "text" : "Responsive design",
-      "done" : "false"
+      "done" : "true"
     },
     {
       "text" : "Javascript",
-      "done" : "false"
+      "done" : "true"
     },
     {
       "text" : "PHP",
-      "done" : "false"
+      "done" : "true"
     },
     {
       "text" : "Laravel",
-      "done" : "false"
+      "done" : "true"
     }
 ]
