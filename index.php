@@ -12,6 +12,41 @@
 </head>
 <body>
     <div id="app">
+    <div class="container">
+            <div class="row p-4">
+                <div class="col-sm-6">
+                    <input class="form-control" type="text" placeholder="add" aria-label="default input example"> 
+                    <button class="btn btn-primary">add</button>  
+                    <div class="list-group ">
+                        <div class="list-group-item"
+                            v-for="task in tasksList">
+                            <label class="form-check form-switch ">
+                                <input class="form-check-input" type="checkbox" role="switch" v-model="task.done" >
+                                <div class="d-flex px-2 justify-content-between align-items-start">
+                                
+                                    <div :class="{'text-decoration-line-through' : task.done }" class="">
+                                        {{task.text}}
+
+                                    </div>
+                                    <div class="">
+                                        <button  class="btn btn-danger" >
+                                            delete
+                                        </button>
+                                    </div>
+
+
+                                </div>
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+              
+                
+            </div>
+        </div>
+
 
 
     </div>
