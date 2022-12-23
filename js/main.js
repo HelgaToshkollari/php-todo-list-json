@@ -3,6 +3,7 @@ const app = createApp ({
     data(){
         return{
             tasksList: [],
+            newtask: {}
 
         }
     },
@@ -10,6 +11,13 @@ const app = createApp ({
         fetchTasks() {
             axios.get("api/tasks.php").then((resp) => {
               this.tasksList = resp.data;
+            });
+        },
+        formSubmit(){
+            axios.post("api/newtask.php", this.newtask, {
+                headers: {'Content-Type': 'multipart/form-data'}
+            }).then((resp) => {
+                this.fetchTasks();
             });
         },
 

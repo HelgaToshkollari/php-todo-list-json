@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +18,9 @@
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center mt-4">
                 <div class="col-sm-6">
-                    <form class="d-flex justify-content-center align-items-center mb-4">
+                    <form @submit.prevent="formSubmit" class="d-flex justify-content-center align-items-center mb-4">
                       <div class="form-outline flex-fill">
-                        <input type="text" id="form2" class="form-control" placeholder="New task.."/>
+                        <input type="text" id="form2" class="form-control" placeholder="New task.." name="newtask" v-model="newtask"> /*v-model="newtask.text"*/
                       </div>
                       <button type="submit" class="btn btn-dark ms-2">Add</button>
                     </form>
