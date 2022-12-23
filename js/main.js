@@ -3,7 +3,11 @@ const app = createApp ({
     data(){
         return{
             tasksList: [],
-            newtask: {}
+            newtasks: {
+                text:"",
+                done: false
+
+            },
 
         }
     },
@@ -14,12 +18,17 @@ const app = createApp ({
             });
         },
         formSubmit(){
-            axios.post("api/newtask.php", this.newtask, {
+           
+            axios.post("api/newtask.php", this.newtasks,{
                 headers: {'Content-Type': 'multipart/form-data'}
             }).then((resp) => {
+                
                 this.fetchTasks();
-            });
+            }).catch((error) => {console.warn(error)});
+           
+
         },
+       
 
     },
     mounted() {

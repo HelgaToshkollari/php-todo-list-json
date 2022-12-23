@@ -2,8 +2,8 @@
 
 $tasks = file_get_contents("../tasks.json");
 
-
-header("Content-Type: application/json");
+header ("Content-Type: application/json");
 
 echo ($tasks);
+
 ?>

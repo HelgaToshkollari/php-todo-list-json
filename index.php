@@ -20,7 +20,7 @@
                 <div class="col-sm-6">
                     <form @submit.prevent="formSubmit" class="d-flex justify-content-center align-items-center mb-4">
                       <div class="form-outline flex-fill">
-                        <input type="text" id="form2" class="form-control" placeholder="New task.." name="newtask" v-model="newtask"> /*v-model="newtask.text"*/
+                        <input type="text" id="form2" class="form-control" placeholder="New task.." v-model="newtasks.text">
                       </div>
                       <button type="submit" class="btn btn-dark ms-2">Add</button>
                     </form>
@@ -30,7 +30,7 @@
                             <label class="form-check form-switch ">
                                 <input class="form-check-input" type="checkbox" role="switch" v-model="task.done" >
                                 <div class="d-flex px-2 justify-content-between align-items-start">
-                                    <div :class="{'text-decoration-line-through' : task.done }" >
+                                    <div :class="{'text-decoration-line-through' : (task.done === true) }" >
                                         {{task.text}}
                                     </div>
                                     <div class="">
